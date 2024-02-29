@@ -2,7 +2,9 @@
 """
 Created on Fri Aug 11 16:17:57 2023
 
-@author: alessio
+@authors: alessio cirone; cristina campi; sara garbarino
+
+@email: alessio.cirone@hsanmartino.it; campi@dima.unige.it; garbarino@dima.unige.it
 """
 
 import sys
