@@ -9,5 +9,4 @@ Requirements: Python3 (numpy, pandas, mahotas, nibabel, Dcm2niix); Freesurfer; F
 * 04: Perform additional GTM segmentation on the T1 MRI
 * 05: Convert FDG PET from DICOM to Nifti format
 * 06: Spatially normalize FDG PET and GTMSeg to MNI coordinates
-* 07: Normalize intensities of the FDG PET
-* 08: Conduct Regional Analysis of FDG PET, resulting in the mean FDG uptake in all segmented regions
+* 07: Normalize intensities of the PET and conduct Regional Analysis, resulting in the mean PET uptake in all segmented regions
