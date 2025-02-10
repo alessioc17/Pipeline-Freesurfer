@@ -8,11 +8,9 @@ Created on Fri Aug 11 16:17:57 2023
 """
 
 # matplotlib qt5
-import sys
-import os
+import sys, os, mahotas
 import numpy as np
 import nibabel as nib
-import mahotas
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -88,7 +86,6 @@ if __name__ == '__main__':
                         PET_norm_wm_VOI_i_std.append(np.std(PET_norm_wm_VOI_i))
                         PET_norm_wm_VOI_i_size.append(np.count_nonzero(PET_norm_wm_VOI_i))
                     header = pd.MultiIndex.from_product([[subj_id]])
-                    #header = pd.MultiIndex.from_product([[subj_id[:-4]]])
                     df_norm_wm_VOI_mean = (pd.DataFrame(PET_norm_wm_VOI_i_mean, index=VOI_list, columns=header)).round(3)
                     df_norm_wm_VOI_mean_subj = pd.concat([df_norm_wm_VOI_mean_subj, df_norm_wm_VOI_mean], axis=1)
                     df_norm_wm_VOI_std = (pd.DataFrame(PET_norm_wm_VOI_i_std, index=VOI_list, columns=header)).round(3)
