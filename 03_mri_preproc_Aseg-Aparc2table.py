@@ -64,4 +64,16 @@ if __name__ == '__main__':
         "Cortical Thickness rh": pd.read_csv("rh_aparc.txt", sep='\t'),
         "Cortical Thickness lh": pd.read_csv("lh_aparc.txt", sep='\t')
     }
+    
+    # Update the first column header to "Subject" in each DataFrame
+    for sheet_name, df in dataframes.items():
+        df.columns.values[0] = "Subject"
+        
+        # Drop unwanted columns if they exist in the DataFrame
+        columns_to_drop = [
+            "5th-Ventricle", "WM-hypointensities", "Left-WM-hypointensities", 
+            "Right-WM-hypointensities", "non-WM-hypointensities", 
+            "Left-non-WM-hypointensities", "Right-non-WM-hypointensities"]
+        df.drop(columns=[col for col in columns_to_drop if col in df.columns], inplace=True)
+    
     create_excel_with_sheets(path_project / 'MRI_table.xlsx', dataframes)
