@@ -1,4 +1,5 @@
-# Pipeline-Freesurfer
+# REMIND - Regional Extraction and analysis of MRI and PET features for INtegrated Diagnostics
+
 MRI Segmentation Pipeline with Freesurfer and Optional Processing with Petsurfer
 
 Requirements: Python3 (numpy, pandas, mahotas, nibabel, Dcm2niix); Freesurfer; FSL; ANTs; Nipype
